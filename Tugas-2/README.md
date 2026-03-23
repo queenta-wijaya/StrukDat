@@ -202,6 +202,22 @@ System.out.println("========== DATA ART COMMISSION NAO ==========");
         System.out.println("On Progress: " + working + " | Queued: " + queued);
         System.out.println("==============================================");
 ```
-Bagian ini adalah bagian `main` dari kode. Pada potongan kode ini terdapat array dari `ArtComm` dengan nama `workingList` yang berisi list dari pemesan serta status pesanannya. Output dari program ini juga berisi jumlah karya dengan status on progress dan queued untuk mempermudah artist mengatur waktu dalam mengerjakan pesanan.
+Bagian ini adalah bagian `main` dari kode. Pada potongan kode ini terdapat array dari `ArtComm` dengan nama `workingList` yang berisi list dari pemesan serta status pesanannya. Output dari program ini juga berisi jumlah karya dengan status `on progress` dan `queued` untuk mempermudah artist mengatur waktu dalam mengerjakan pesanan.
 
 ### 4. Screenshot Output
+Berikut merupakan screenshot output dari program yang saya buat:  
+![output1](../assets/Tugas-2/output-fix-1.png)<br>
+![output2](../assets/Tugas-2/output-fix-2.png)<br>
+
+### 5. Prinsip OOP yang Diterapkan
+#### a) Abstraksi
+Abstraksi pada kode yang saya buat dapat dilihat pada kelas utama yang menggunakan `abstract` agar atributnya dapat diturunkan ke kelas-kelas turunannya.
+#### b) Inheritance
+Pada kode saya terdapat dua kelas turunan, yakni `DigiArt` serta `TradiArt`, yang menurunkan atribut dari kelas utamanya, yakni `ArtComm`.
+#### c) Encapsulation
+Pada kelas utama, yakni `ArtComm`, saya menggunakan `protected` untuk atributnya, bukan `private`, agar atribut-atribut tersebut dapat diakses oleh subclassnya, namun tidak bisa diakses dari luar kelas.
+#### d) Polymorphism
+Polymorphism dalam kode saya dapat dilihat pada fungsi `infoComm()` yang diimplementasikan di dua subclass. Dua subclass ini sama-sama memanggil fungsi `infoComm()` namun menghasilkan output yang berbeda tergantung jenis artnya. Contohnya, subclass `DigiArt` mengeluarkan output `DIGITAL ART`, sedangkan subclass `TradiArt` mengeluarkan output `TRADITIONAL ART`.
+
+### 6. Keunikan
+Keunikan yang terdapat pada kode saya adalah saya membuat outputnya sedemikian rupa sehingga terlihat rapi. Sehingga ketika digunakan, seseorang lebih mudah membaca dan memahami informasinya. Jumlah status `on progress` dan `queued` di bagian paling bawah output juga menurut saya sangat berguna agar seseorang tidak kewalahan atau salah hitung dalam menghitung dan membagi waktu untuk mengerjakan pesanannya.
